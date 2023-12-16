@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<form method="get" action="/show_more">
+    {% csrf_token %}
+    <input type="text" name="q" placeholder="Search...">
+    <input type="submit" value="Search">
+</form>
+<form action="">
+    <div class="container row m-lg-5 overflow-hidden" style="background:#f8f9fa">
+        <div class="container my-3 py-4" style="border:4px solid #0d6efd;width:80%">
+            <div class="container ">
+                <h1 style="color:#0d6efd" class="text-center">Personal Details</h1>
+                {% for resume in results %}
+                <p>Teacher Name : <i> {{ resume.tname }} </i>
+                </p>
+                <p>TeacherEmail : {{ resume.temail }}
+                </p>
+                <p>TeacherPhone :{{ resume.phone }}
+                </p>
+                <p>TeacherDOB :{{ resume.dob }}
+                </p>
+                <p>TeacherAddress :{{ resume.tadd }}
+                </p>
+                <p>Teacher SSC Percentage :{{ resume.tsscp}}
+                </p>
+                <p>Teacher HSC College :{{ resume.tsscs }}
+                </p>
+                <p>Teacher HSC Percentage :{{ resume.thscp }}
+                </p>
+                <p>Teacher Graduation College :{{ resume.tgc }}
+                </p>
+                <p>Teacher Graduation Percentage/CGPA :{{ resume.tgp }}</p>
+                <p>Teacher Post Graduation College :{{ resume.tpgc }}
+                </p>
+                <p>Teacher Post Graduation Percentage/CGPA :{{ resume.tpgp }}
+                </p>
+                <p>Is Teacher Qualified Any Goverment Exam :{{ resume.tge }}
+                </p>
+                <p>Goverment Exam Qualified BY Teacher is :{{ resume.teq }}
+                </p>
+                <p>Teacher Goverment Qualified Year :{{ resume.teqy }}
+                </p>
+                <p>Teacher Services in :{{ resume.teacher_service }}
+                </p>
+                <p>Teacher Service Join Date is :{{ resume.join_date }}
+                </p>
+                <p>Teacher Salary is :{{ resume.teacher_salary }}
+                </p>
+                <p>Teacher Pension After Retarment is approx{{ resume.pension }}
+                </p>
+                <p>Teacher Experience in teaching field is :{{ resume.teacher_exp}}
+                </p>
+                <p>{{resume.field_name}}</p>
+
+
+                    {% endfor %}
+                    <button type="button"onclick="display()" class="btn btn-success"style="width:100px">Print</button>
+            </div>
+            
+    </div>
+   
+</form>
+<script>
+   function display() {
+      window.print();
+   }
+</script>
+
+
+
+
+{% endblock content %}

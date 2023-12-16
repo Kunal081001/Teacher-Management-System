@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+
+<section id="hero" class="d-flex align-items-center my-3">
+
+     <div class="container">
+          <div class="row">
+               <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <h1 style="font-family: 'Lobster', cursive; font-weight:300;font-size:55px ;color:rgb(101, 59, 179)">Teacher Management
+                         System</h1>
+                    <h2>"Better than a thousand days of diligent study is one day with a great teacher."</h2>
+               </div>
+               <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="/static/hero-img.png" class="img-fluid animated" alt="">
+               </div>
+          </div>
+     </div>
+
+</section><!-- End Hero -->
+
+<main id="main">
+     {% comment %} ------------------------------------------------------------------------ {% endcomment %}
+
+
+
+     {% comment %} ----------------------------------------------------- {% endcomment %}
+     <section class="py-5 text-center container mb-3" style="border:6px inset rgb(101, 59, 179);border-radius:10px">
+          <div class="row py-lg-5">
+               <div class="col-lg-7 col-md-8 mx-auto">
+                    <h1 class="fw-bold" style="color: rgb(101, 59, 179);font-weight:500;font-size:50px">Teacher
+                         Management System</h1>
+                    <p class="lead text-muted">Every year through the government exams plenty of teachers are hired and
+                         posted in various government schools. The tracking of teachers from recruitment to their entire
+                         service duration is done manually which makes it difficult to manage and keep track. Our Portal
+                         Overcome all those problems.</p>
+               </div>
+          </div>
+     </section>
+
+     <div class="container marketing">
+
+
+
+
+          <!-- START THE FEATURETTES -->
+          {% comment %}
+          <hr class="featurette-divider">
+
+          <div class="row featurette">
+               <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">Easy To Handle <span class="text-muted">It’ll Store
+                              all Informartion of You.</span></h2>
+                    <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting
+                         prose here.</p>
+               </div>
+               <div class="col-md-5">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="300"
+                         height="300" xmlns="static/skills.png" role="img" aria-label="Placeholder: 500x500"
+                         preserveAspectRatio="xMidYMid slice" focusable="false">
+                         <title>Placeholder</title>
+                         <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa"
+                              dy=".3em">500x500</text>
+                    </svg>
+               </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <div class="row featurette">
+               <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-muted">See
+                              for yourself.</span></h2>
+                    <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of
+                         how this layout would work with some actual real-world content in place.</p>
+               </div>
+               <div class="col-md-5 order-md-1">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                         height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                         preserveAspectRatio="xMidYMid slice" focusable="false">
+                         <title>Placeholder</title>
+                         <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa"
+                              dy=".3em">500x500</text>
+                    </svg>
+               </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <div class="row featurette">
+               <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span
+                              class="text-muted">Checkmate.</span></h2>
+                    <p class="lead">And yes, this is the last block of representative placeholder content. Again, not
+                         really intended to be actually read, simply here to give you a better view of what this would
+                         look like with some actual content. Your content.</p>
+               </div>
+               <div class="col-md-5">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                         height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                         preserveAspectRatio="xMidYMid slice" focusable="false">
+                         <title>Placeholder</title>
+                         <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa"
+                              dy=".3em">500x500</text>
+                    </svg>
+               </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- /END THE FEATURETTES -->
+
+     </div> {% endcomment %}
+     <hr>
+     <section id="skills" class="skills mt-5">
+          <div class="container" data-aos="fade-up">
+
+               <div class="row">
+                    <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+                         <img src="/static/skills.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 content ml-1" data-aos="fade-left" data-aos-delay="100">
+                         <h3 style="margin-top:150px; font-size:50px;font-family: 'Lobster', cursive;">Easy To Navigate
+                         </h3>
+                         <p class="fst-italic">
+                              Even Non-Technical Person Also Handle This Website...
+                         </p>
+                    </div>
+
+               </div>
+          </div>
+
+          </div>
+     </section>
+     <hr>
+
+     <section id="skills" class="skills mt-5">
+          <div class="container" data-aos="fade-up">
+
+               <div class="row">
+                    
+                    <div class="col-lg-6 pt-4 pt-lg-0 content ml-1" data-aos="fade-left" data-aos-delay="100">
+                         <h3 style="margin-top:150px; font-size:50px;font-family: 'Lobster', cursive;">
+                              Easy To See Details..
+                         </h3>
+                         <p class="fst-italic">
+                              You Can Easily Contact To Teacher Through This Portal..
+                         </p>
+                    </div>
+                    <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+                         <img src="/static/Contact.jpg" class="img-fluid" alt="">
+                    </div>
+
+               </div>
+          </div>
+
+          </div>
+     </section>
+     <hr>
+     
+     
+     {% comment %} ------------------------------------------------------------- {% endcomment %}
+   
+
+     {% include 'footer.html' %}
+     {% endblock content %}

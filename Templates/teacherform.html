@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<div class="container row m-lg-5 overflow-hidden" style="background:#f8f9fa">
+    <div class="container my-3 py-4" style="border:4px solid #0d6efd;width:80%">
+        <div class="container text-center">
+            <h1 style="color:#0d6efd">Personal Details</h1>
+        </div>
+        <form method="post" action="/teacherform"enctype="multipart/form-data">
+        {% csrf_token %}
+            <div class="form-group my-3">
+                <label for="tname">Teacher Name :</label>
+                <input type="text" class="form-control" id="name" name="tname" placeholder="Enter your Name">
+            </div>
+            <div class="form-group my-3">
+                <label for="temail">Teacher Email :</label>
+                <input type="text" class="form-control" id="name" name="temail" >
+            </div>
+            <div class="form-group my-3">
+                <label for="tphone">Teacher Mobile No. :</label>
+                <input type="text" class="form-control" id="name" name="tphone" >
+            </div>
+            <div class="form-group my-3">
+                <label for="tdob">Teacher DOB :</label>
+                <input type="date" class="form-control" id="name" name="tdob" >
+            </div>
+            <div class="form-group my-3">
+                <label for="tadd">Teacher Address:</label>
+                <textarea class="form-control" id="desc" rows="3" name="tadd"placeholder="Your Address"></textarea>
+            </div>
+            
+            <div class="container text-center">
+                <h1 style="color:#0d6efd">Eduacational Details</h1>
+            </div>
+                 <div class="form-group my-3">
+                    <label for="tsscs">10th School/Board Name::</label>
+                    <input type="text" class="form-control" id="name" name="tsscs">
+                </div>
+                <div class="form-group my-3">
+                    <label for="tsscp">10th Percentages :</label>
+                    <input type="text" class="form-control" id="name" name="tsscp">
+                </div>
+                <div class="form-group my-3">
+                    <label for="thscs">12th School/Board Name::</label>
+                    <input type="text" class="form-control" id="name" name="thscs">
+                </div>
+                <div class="form-group my-3">
+                    <label for="thscp">12th Percentages:</label>
+                    <input type="text" class="form-control" id="name" name="thscp">
+                </div>
+                <div class="form-group my-3">
+                    <label for="tgp">Graduation Aggregate Pencentages/CGPA:</label>
+                    <input type="text" class="form-control" id="name" name="tgp">
+                </div>
+                <div class="form-group my-3">
+                    <label for="tgc">Graduation College/University:</label>
+                    <input type="text" class="form-control" id="name" name="tgc">
+                </div>
+                <div class="form-group my-3">
+                    <label for="tpgp">Post-Graduation Percentages/CGPA:</label>
+                    <input type="text" class="form-control" id="name" name="tpgp">
+                </div>
+                <div class="form-group my-3">
+                    <label for="tpgc">Post-Graduation College/University:</label>
+                    <input type="text" class="form-control" id="name" name="tpgc">
+                </div>
+                <div class="container text-center">
+                    <h1 style="color:#0d6efd">Professional Details</h1>
+                </div>
+                <div class="form-group my-3">
+                <label for="tge">Are you qualified any Goverment Exam:</label>
+                <select class="form-select" aria-label="Default select example"name="tge">
+                    <option selected value="1">Yes</option>
+                    <option value="2">No</option>
+                </select></div>
+                <div class="form-group my-3">
+                <label for="teq">Which Exam You Qualified:</label>
+                <input type="text" class="form-control" id="name" name="teq">
+            </div>
+            <div class="form-group my-3">
+                <label for="teqy">In which Year You Qaulified Exam :</label>
+                <input type="text" class="form-control" id="name" name="teqy">
+            </div>
+            <div class="container text-center">
+                <h1 style="color:#0d6efd">Service Details</h1>
+            </div>
+            <div class="form-group my-3">
+                <label for="teacher_service">Name of School/Institute you working :</label>
+                <input type="text" class="form-control" id="name" name="teacher_service">
+            </div>
+            <div class="form-group my-3">
+            <label for="join_date">Please Mention Your Joining Date :</label>
+            <input type="date" class="form-control" id="name" name="join_date">
+            </div>
+        <div class="form-group my-3">
+            <label for="teacher_salary">Current Salary:</label>
+            <input type="text" class="form-control" id="name" name="teacher_salary">
+        </div>
+        <div class="form-group my-3">
+            <label for="teacher_exp">How Many Year Of Experience You Have in Teaching Field: :</label>
+            <input type="text" class="form-control" id="name" name="teacher_exp">
+        </div>
+        <div class="form-group my-3">
+            <label for="upload_file">Upload File:</label>
+            <input type="file" class="form-control" id="upload_file" name="upload_file">
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+            
+    </div>
+    </form>
+</div>
+{% endblock content %}

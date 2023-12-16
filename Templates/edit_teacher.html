@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+<form method="POST" class="post-form" action="/update/{{ teacher.tid}}">  
+        {% csrf_token %}  
+    <div class="container">  
+<br>  
+     <h3>Update Details</h3>  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Teacher Id:</label>  
+    <div class="col-sm-4">  
+            <input type="text" name="tid" id="id_tid" required maxlength="20" value="{{ teacher.tid }}"/>  
+    </div> 
+    <label class="col-sm-2 col-form-label">Teacher Name:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="tname" id="id_tname" required maxlength="50" value="{{ teacher.tname }}"/>  
+    </div>  
+  </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Teacher Email:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="temail" id="id_temail" required maxlength="100" value="{{ teacher.temail }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Teacher Phone:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="tphone" id="id_tphone" required maxlength="254" value="{{ teacher.tphone }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Teacher Address:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="tadd" id="id_tadd" required maxlength="255" value="{{ teacher.tadd }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <button type="submit" class="btn btn-success">Update</button>  
+    </div>  
+  </div>  
+    </div>  
+</form>  
+  
+{% endblock content %}
+
